@@ -28,6 +28,11 @@ class _MyAppState extends State<MyApp> {
         .registerNativeToDart("testNative", methodCallback);
   }
 
+  /// native向flutter发送事件
+  ntfEventCallback(args) {
+    print(args);
+  }
+
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     String platformVersion;
@@ -57,11 +62,6 @@ class _MyAppState extends State<MyApp> {
 
   onClickNTFChannel() async {
     ExampleFTNMethodChannel.sendEventTest();
-  }
-
-  /// native向flutter发送事件
-  ntfEventCallback(args) {
-    print(args);
   }
 
   Future<String> methodCallback(args) async {
