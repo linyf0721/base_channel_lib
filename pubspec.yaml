@@ -1,6 +1,6 @@
 name: basechannellib
 description: flutter与native基础通信
-version: 1.0.0
+version: 1.0.1
 author: 林云飞<lyf_0721@163.com>
 homepage: https://github.com/linyf0721/base_channel_lib
 publish_to: http://172.16.21.90:10088
