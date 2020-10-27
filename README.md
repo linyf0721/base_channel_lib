@@ -186,12 +186,20 @@ class NTFEventChannel extends BaseNTFEventChannel {
 
 ```dart
 /// 注册事件
-NTFEventChannel.instance().registerEvent("test", ntfEventCallback);
+EventHandle enventHandle = NTFEventChannel.instance().registerEvent("test", ntfEventCallback);
 
  /// 事件回调
  ntfEventCallback(args) {
     print(args);
  }
+```
+
+- dart 注销事件
+
+```dart
+/// 注销事件
+NTFEventChannel.instance().cancelEvent(enventHandle);
+
 ```
 
 - native 定义事件通信单例类
